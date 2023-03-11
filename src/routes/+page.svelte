@@ -35,7 +35,7 @@
 			save.clearRect(0, 0, 128, 496);
 			document.removeEventListener('keydown', handleInput);
 			document.removeEventListener('keyup', keyUpListener);
-			FALL_SPEED = 250;
+			FALL_SPEED = 500;
 			grid = Array.from({ length: 16 }).map(() => Array.from({ length: 8 }));
 			piece = null;
 			groundMoves = 0;
@@ -318,7 +318,7 @@
 			board.strokeRect(0, 0, 248, 496);
 			board.lineWidth = 0.2;
 			if (!piece) {
-				if (pillCount % 10 === 0 && FALL_SPEED > 50) FALL_SPEED -= 16;
+				if (pillCount % 10 === 0 && FALL_SPEED > 50) FALL_SPEED -= 10;
 				pillCount++;
 				checkToClear();
 				if (idle) return;
