@@ -4,7 +4,7 @@
 		const save = document.getElementById('save').getContext('2d');
 		const board = document.getElementById('board').getContext('2d');
 		const queue = document.getElementById('queue').getContext('2d');
-		let FALL_SPEED = 333;
+		let FALL_SPEED = 500;
 		const DAS = 80;
 		const colors = ['red', 'yellow', 'blue'];
 		const SKIPS = 20;
@@ -119,6 +119,7 @@
 			if (!piece) draw();
 			if (idle) return;
 			if (canMoveDown(piece)) {
+				groundMoves = 0;
 				piece.forEach((pill) => {
 					pill[1]++;
 				});

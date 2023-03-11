@@ -2,6 +2,10 @@
 	import '../app.scss';
 </script>
 
+<svelte:head>
+	<title>Dr Wong</title>
+</svelte:head>
+
 <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
 	<div class="container">
 		<a class="navbar-brand" href="/">Dr Wong</a>
