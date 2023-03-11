@@ -50,6 +50,8 @@
 			startTime = new Date();
 			initVirus();
 			draw();
+			board.fillStyle = 'black';
+			board.fillRect(0, 238, 248, 56);
 			board.fillStyle = 'white';
 			board.fillText('Ready?', 124, 278);
 			setTimeout(initGo, 1000);
@@ -58,6 +60,8 @@
 		const initGo = () => {
 			board.clearRect(0, 0, 248, 496);
 			draw();
+			board.fillStyle = 'black';
+			board.fillRect(0, 238, 248, 56);
 			board.fillStyle = 'white';
 			board.fillText('Go!', 124, 278);
 			setTimeout(initGame, 1000);
